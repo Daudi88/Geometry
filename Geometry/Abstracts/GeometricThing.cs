@@ -1,4 +1,4 @@
-﻿namespace Geometry
+﻿namespace Geometry.Abstracts
 {
     public abstract class GeometricThing
     {
