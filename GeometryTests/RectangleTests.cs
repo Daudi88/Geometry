@@ -7,7 +7,7 @@
     {
         [TestCase(5, 3, 15)]
         [TestCase(4.2f, 8.6f, 36.12f)]
-        public void AreaTest_ValidInput_ReturnsArea(
+        public void AreaTest_PositiveInput_ReturnsArea(
             float height,
             float width,
             float expected)
@@ -19,7 +19,7 @@
 
         [TestCase(-4, 8, 0)]
         [TestCase(4, -8, 0)]
-        public void AreaTest_InvalidInput_ReturnsZero(
+        public void AreaTest_NegativeInput_ReturnsZero(
             float height,
             float width,
             float expected)
@@ -31,7 +31,7 @@
 
         [TestCase(5, 3, 16)]
         [TestCase(2.5f, 4.2f, 13.4f)]
-        public void PerimiterTest_ValidInput_ReturnsPerimiter(float height, float width, float expected)
+        public void PerimiterTest_PositiveInput_ReturnsPerimiter(float height, float width, float expected)
         {
             var rectangle = new Rectangle { Height = height, Width = width };
             var actual = rectangle.Perimiter();
@@ -40,7 +40,7 @@
 
         [TestCase(-4, 8, 0)]
         [TestCase(4, -8, 0)]
-        public void PerimiterTest_InvalidInput_ReturnsZero(float height, float width, float expected)
+        public void PerimiterTest_NegativeInput_ReturnsZero(float height, float width, float expected)
         {
             var rectangle = new Rectangle { Height = height, Width = width };
             var actual = rectangle.Perimiter();
